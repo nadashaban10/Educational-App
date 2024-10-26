@@ -24,13 +24,13 @@ function NavBar() {
 
   return (
     <>
-      <div className="nav-container fixed top-0 left-0 flex justify-center items-center px-3 z-50  w-full bg-white text-gray-700  font- font-poppins ">
+      <div className="nav-container fixed top-0 left-0 flex justify-between items-center px-3 z-50  w-full bg-white text-gray-700  font- font-poppins ">
         <div className="flex items-center">
           
           <img src={logo} className="w-[180px] h-[80px] " />
           <CiMenuBurger className={`text-xl text-center  mr-4 cursor-pointer md:hidden ${isNavVisible ? "X" : <CiMenuBurger />}`} onClick={toggleNav} />
         </div> {/*backdrop-filter backdrop-blur-lg*/ }
-        <div className={`nav-links flex-grow flex justify-center space-x-4 text-gray-700  text-xl flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 font-poppins ${isNavVisible ? 'fixed top-0 left-0 w-[65%] md:w-[1000px] bg-[#366cff] h-screen md:h-[300px] justify-center items-center text-white tracking-widest space-y-7 z-50 rounded-tr-xl   ' : 'hidden'} md:flex justify-start `}>
+        <div className={`nav-links flex-grow flex justify-center space-x-4 text-gray-700  text-xl flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 font-poppins ${isNavVisible ? 'fixed top-0 left-0 w-[65%] md:w-[1000px] bg-blue-500 bg-opacity-[90%] h-screen md:h-[300px] justify-center items-center text-white tracking-widest space-y-7 z-50 rounded-tr-xl   ' : 'hidden'} md:flex justify-start `}>
           <button className="nav-button bg-white text-black rounded-full  text-2xl w-[40px] h-[40px] absolute top-8 right-3 md:hidden" onClick={toggleNav}> x </button>
           <Link to="/" smooth={true} duration={500} className="nav-item cursor-pointer relative">
             Home
@@ -60,7 +60,7 @@ function NavBar() {
             About us
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </ScrollLink>
-          <button className={`nav-item cursor-pointer relative border border-blue-500 rounded-xl bg-blue-500 px-3 text-white w-[90px] h-[40px] ${isNavVisible ? 'block' : 'hidden'} md:hidden`} onClick={handleClickLogin}> Login </button>
+          <button className={`nav-item cursor-pointer relative border border-blue-500 rounded-xl bg-black px-3 text-white w-[150px] h-[60px] ${isNavVisible ? 'block' : 'hidden'} md:hidden`} onClick={handleClickLogin}> Login </button>
         </div>
         <div className={`flex flex-row md:flex-row space-x-5 md:space-y-0 md:space-x-2 font-poppins ${isNavVisible ? 'block' : 'block'} md:flex mr-3 `}>
           <div className='relative flex flex-row  space-x-4 text-blu-500 text-3xl font-bold cursor-pointer'>

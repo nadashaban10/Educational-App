@@ -48,12 +48,12 @@ function LandingPage() {
       <br />
       The Future of Education is Here
     </h4>
-    <p className="text-sm md:text-lg font-poppins text-black">
+    <p className="text-sm md:text-lg font-poppins text-black pb-2">
       Immerse yourself in interactive, AR-driven lessons that bring
       science and history to life for high school students
     </p>
     <div className="w-full h-auto md:h-[180px] flex flex-col md:flex-row items-center font-semibold space-y-3 md:space-y-0">
-      <button className="rounded-full text-lg md:text-2xl h-[70px] md:h-[100px] w-full md:w-[500px] bg-[#366cff] text-center text-white mr-0 md:mr-3 px-3">
+      <button className="rounded-full text-lg md:text-2xl h-[70px] md:h-[100px] w-full md:w-[500px] bg-[#366cff] text-center space-y-2 text-white mr-0 md:mr-3 px-3">
         Sign Up to Be Alerted When the App is Available!
       </button>
       <button className="rounded-full text-lg md:text-2xl h-[50px] md:h-[70px] bg-black w-full md:w-[200px] text-white px-3">
