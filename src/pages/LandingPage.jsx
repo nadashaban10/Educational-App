@@ -29,12 +29,12 @@ function LandingPage() {
       <NavBar />
       <div className="parent-container">
       <div
-  className="hero-container relative flex h-screen flex-col md:flex-row bg-gray-300 bg-cover  md:p-0"
+  className="hero-container relative flex h-screen flex-col md:flex-row bg-gray-100 bg-cover  md:p-0"
   // style={{ backgroundImage: `url(${bgimage})` }}
 >
   {/* <div className="absolute inset-0 bg-black opacity-30"></div> */}
   <motion.div
-    className="hero-left md:relative absolute top-[170px] space-y-3 z-10 md:bg-transparent md:p-8 p-3 bg-gray-100 bg-opacity-[30%]"
+    className="hero-left md:relative absolute top-[200px] space-y-3 z-10 md:bg-transparent md:p-8 p-3 bg-gray-100 bg-opacity-[30%]"
     initial={{ opacity: 0, x: -100 }}
     whileInView={{ opacity: 1, x: 0 }}
     transition={{ duration: 0.8 }}

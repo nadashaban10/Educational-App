@@ -3,6 +3,7 @@ import logo from "../../public/images/IMG_2014-removebg.png";
 import { CiMenuBurger } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
+import { Link } from 'react-router-dom'
 import { FiShoppingCart } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa";
 
@@ -25,23 +26,24 @@ function NavBar() {
     <>
       <div className="nav-container fixed top-0 left-0 flex justify-center items-center px-3 z-50  w-full bg-white text-gray-700  font- font-poppins ">
         <div className="flex items-center">
-          <CiMenuBurger className={`text-xl text-center cursor-pointer md:hidden ${isNavVisible ? "X" : <CiMenuBurger />}`} onClick={toggleNav} />
-          <img src={logo} className="w-[180px] h-[80px] ml-2" />
+          
+          <img src={logo} className="w-[180px] h-[80px] " />
+          <CiMenuBurger className={`text-xl text-center  mr-4 cursor-pointer md:hidden ${isNavVisible ? "X" : <CiMenuBurger />}`} onClick={toggleNav} />
         </div> {/*backdrop-filter backdrop-blur-lg*/ }
-        <div className={`nav-links flex-grow flex justify-center space-x-4 text-gray-700  text-xl flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 font-poppins ${isNavVisible ? 'fixed top-0 left-0 w-[200px] md:w-[1000px] bg-[#366cff] h-screen md:h-[300px] justify-start items-start text-white  space-y-6 z-50  ' : 'hidden'} md:flex justify-start `}>
-          <button className="nav-button bg-white text-gray-600 rounded-full font-bold w-[50px] h-[45px] absolute top-5 right-5 md:hidden" onClick={toggleNav}> X </button>
-          <a href="/" smooth={true} duration={500} className="nav-item cursor-pointer relative">
+        <div className={`nav-links flex-grow flex justify-center space-x-4 text-gray-700  text-xl flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 font-poppins ${isNavVisible ? 'fixed top-0 left-0 w-[65%] md:w-[1000px] bg-[#366cff] h-screen md:h-[300px] justify-center items-center text-white tracking-widest space-y-7 z-50 rounded-tr-xl   ' : 'hidden'} md:flex justify-start `}>
+          <button className="nav-button bg-white text-black rounded-full  text-2xl w-[40px] h-[40px] absolute top-8 right-3 md:hidden" onClick={toggleNav}> x </button>
+          <Link to="/" smooth={true} duration={500} className="nav-item cursor-pointer relative">
             Home
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
-          </a>
-          <a href="/profile" className="nav-item cursor-pointer relative">
+          </Link>
+          <Link href="/profile" className="nav-item cursor-pointer relative">
             Profile
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
-          </a>
-          <a href="/courses" className="nav-item cursor-pointer relative">
+          </Link>
+          <Link href="/courses" className="nav-item cursor-pointer relative">
             Courses
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
-          </a>
+          </Link>
           <ScrollLink to="Pricing" smooth={true} duration={500} className="nav-item cursor-pointer relative">
             Pricing
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
