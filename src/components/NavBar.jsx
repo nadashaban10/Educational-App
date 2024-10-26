@@ -36,11 +36,11 @@ function NavBar() {
             Home
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </Link>
-          <Link href="/profile" className="nav-item cursor-pointer relative">
+          <Link to="/profile" className="nav-item cursor-pointer relative">
             Profile
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </Link>
-          <Link href="/courses" className="nav-item cursor-pointer relative">
+          <Link to="/courses" className="nav-item cursor-pointer relative">
             Courses
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </Link>
