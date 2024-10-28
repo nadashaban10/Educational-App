@@ -1,8 +1,8 @@
 import React from 'react';
 import { FaCheck, FaTimes } from 'react-icons/fa';
-import { motion } from 'framer-motion'; // Import Framer Motion
+import { motion } from 'framer-motion';
 
-function Pricing () {
+function Pricing() {
   const [isYearly, setIsYearly] = React.useState(false);
 
   const packages = [
@@ -60,7 +60,7 @@ function Pricing () {
           Our Pricing Plans
         </motion.h2>
         <motion.p
-          className='text-gray-600 md:w-full mx-auto px-4 '
+          className='text-gray-600 md:w-full mx-auto px-4'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -68,27 +68,22 @@ function Pricing () {
           Choose the plan that best suits your needs and start learning today!
         </motion.p>
         <div className='mt-8 flex justify-center items-center'>
-          <span className='text-2xl font-semibold mr-4'>Monthly</span>
-          <div className='relative inline-block w-14 mr-4 align-middle select-none transition duration-200 ease-in'>
+          <span className='text-2xl font-semibold'>Monthly</span>
+          <div className='relative inline-block w-14 mr-2 align-middle select-none transition duration-200 ease-in'>
             <input
-              type='checkbox'
-              name='toggle'
-              id='toggle'
+              className={`ml-3 mt-4 h-3.5 w-9 appearance-none ${isYearly ? 'bg-blue-500' : ''} rounded-[0.4375rem] bg-neutral-300 before:pointer-events-none before:absolute before:h-3.5 before:w-3.5 before:rounded-full before:bg-transparent before:content-[''] after:absolute after:z-[2] after:-mt-[0.1875rem] after:h-5 after:w-5 after:rounded-full after:border-none after:bg-blue-500 after:shadow-[0_0px_3px_0_rgb(0_0_0_/_7%),_0_2px_2px_0_rgb(0_0_0_/_4%)] after:transition-[background-color_0.2s,transform_0.2s] after:content-[''] checked:bg-primary checked:after:absolute checked:after:z-[2] checked:after:-mt-[3px] checked:after:ml-[1.0625rem] checked:after:h-5 checked:after:w-5 checked:after:rounded-full checked:after:border-none checked:after:bg-primary checked:after:shadow-[0_3px_1px_-2px_rgba(0,0,0,0.2),_0_2px_2px_0_rgba(0,0,0,0.14),_0_1px_5px_0_rgba(0,0,0,0.12)] checked:after:transition-[background-color_0.2s,transform_0.2s] checked:after:content-[''] hover:cursor-pointer focus:outline-none focus:ring-0 focus:before:scale-100 focus:before:opacity-[0.12] focus:before:shadow-[3px_-1px_0px_13px_rgba(0,0,0,0.6)] focus:before:transition-[box-shadow_0.2s,transform_0.2s] focus:after:absolute focus:after:z-[1] focus:after:block focus:after:h-5 focus:after:w-5 focus:after:rounded-full focus:after:content-[''] checked:focus:border-primary checked:focus:bg-primary checked:focus:before:ml-[1.0625rem] checked:focus:before:scale-100 checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca] checked:focus:before:transition-[box-shadow_0.2s,transform_0.2s] dark:bg-neutral-600 dark:after:bg-neutral-400 dark:checked:bg-primary dark:checked:after:bg-primary dark:focus:before:shadow-[3px_-1px_0px_13px_rgba(255,255,255,0.4)] dark:checked:focus:before:shadow-[3px_-1px_0px_13px_#3b71ca]`}
+              type="checkbox"
+              role="switch"
+              id="flexSwitchCheckDefault"
               checked={isYearly}
-              onChange={() => setIsYearly(!isYearly)}
-              className='toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer'
+              onChange={() => setIsYearly(!isYearly)} 
             />
             <label
-              htmlFor='toggle'
-              className={`toggle-label block overflow-hidden h-6 rounded-full cursor-pointer ${isYearly ? 'bg-[#366cff]' : 'bg-gray-300'}`}
+              className="inline-block pl-[0.15rem] hover:cursor-pointer"
+              htmlFor="flexSwitchCheckDefault"
             ></label>
-            <motion.div
-              className='absolute left-0 top-0 w-6 h-6 rounded-full bg-white border-4'
-              animate={{ x: isYearly ? 32 : 0 }} // Animate the toggle
-              transition={{ type: 'spring', stiffness: 300 }}
-            />
           </div>
-          <span className='text-2xl font-semibold ml-4'>Yearly</span>
+          <span className='text-2xl font-semibold'>Yearly</span>
         </div>
       </div>
       <div className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 w-full text-center'>
@@ -98,7 +93,7 @@ function Pricing () {
             className='bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between items-center w-[85%] mx-auto'
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 * packages.indexOf(pkg) }} // Staggered animation
+            transition={{ duration: 0.6, delay: 0.1 * packages.indexOf(pkg) }}
           >
             <div>
               <h3 className='text-2xl font-bold mb-2'>{pkg.name}</h3>
@@ -126,7 +121,7 @@ function Pricing () {
             </div>
             <motion.button
               className='bg-[#366cff] text-white py-2 px-4 rounded-lg mt-auto'
-              whileHover={{ scale: 1.05 }} // Hover animation for button
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               Choose Plan
