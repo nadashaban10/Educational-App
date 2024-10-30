@@ -124,15 +124,15 @@ function LandingPage() {
   </div>
 </motion.div>
 
-      <motion.div
-  className="Card-container flex flex-col justify-center items-center space-y-5 mt-[50px] mb-[0px] md:mb-[50px] bg-gray-50 py-9"
+<motion.div
+  className="Card-container flex flex-col justify-center items-center sm:items-center md:items-center space-y-5 mt-[50px] mb-[0px] md:mb-[50px] bg-gray-50 py-9"
   initial={{ opacity: 0, y: 50 }}
   whileInView={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}
 >
-  <h2 className="text-4xl text-blue-600 tracking-widest">EXPLORE OUR TOP SUBJECTS</h2>
-  <div className="flex text-center justify-center flex-row items-center space-x-5">
+  <h2 className="text-4xl text-blue-600 tracking-widest text-center">EXPLORE OUR TOP SUBJECTS</h2>
+  <div className="flex flex-col md:flex-row text-center justify-center items-center space-y-5 md:space-y-0 md:space-x-5">
     <div className="card-1 relative w-[90%] md:w-[400px] h-[230px]">
       <img src={img2} className="w-full h-full rounded-lg" />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-30 p-1 rounded">
@@ -144,15 +144,13 @@ function LandingPage() {
     <div className="card-2 relative w-[90%] md:w-[400px] h-[230px]">
       <img src={img3} className="w-full h-full rounded-lg" />
       <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-30 p-1 rounded">
-
         {/* <button className="mt-2 text-white bg-blue-600 hover:bg-black p-1 rounded-full w-[110px] md:w-[130px] h-[35px] md:h-[40px]">
           Start Class
         </button> */}
       </div>
     </div>
   </div>
-
-</motion.div> 
+</motion.div>
 
       <motion.div
         className=""
