@@ -45,13 +45,13 @@ const navigate = useNavigate();
     transition={{ duration: 0.8 }}
     viewport={{ once: true }}
   >
-    <h4 className="text-2xl md:text-5xl font-bold font-poppins text-white">
-      <span className="text-blue-500">
+    <h4 className="text-3xl md:text-5xl font-bold font-poppins text-white">
+      <span className="text-blue-500 md:text">
         Transform Learning with
          Arcade Academy
       </span>
       <br />
-      The Future of Education is Here
+     <span className="text-2xl md:text-4xl"> The Future of Education is Here</span>
     </h4>
     <p className="text-sm md:text-lg font-poppins text-white pb-2">
       Immerse yourself in interactive, AR-driven lessons that bring
@@ -59,10 +59,10 @@ const navigate = useNavigate();
     </p>
     <div className="w-full h-auto md:h-[180px] flex flex-col md:flex-row items-center font-semibold space-y-3 md:space-y-0">
       <button onClick={handlenavigate}
-       className="rounded-full text-lg md:text-2xl h-[70px] md:h-[100px] w-full md:w-[500px] bg-[#366cff] text-center space-y-2 text-white mr-0 md:mr-3 px-3">
-        Sign Up to Be Alerted When the App is Available!
+       className="rounded-full text-md md:text-xl h-[70px] md:h-[100px] w-full md:w-[500px] bg-[#366cff] text-center space-y-2 text-white mr-0 md:mr-3 px-3">
+        Sign Up to Be Alerted When the App is Available !
       </button>
-      <button className="rounded-full text-lg md:text-2xl h-[50px] md:h-[70px] bg-black w-full md:w-[200px] text-white px-3">
+      <button className="rounded-full text-md md:text-xl h-[50px] md:h-[70px] bg-black w-full md:w-[200px] text-white px-3">
         View Demo
       </button>
     </div>
@@ -175,8 +175,8 @@ const navigate = useNavigate();
   transition={{ duration: 0.8 }}
   viewport={{ once: true }}
 >
-  <div className="w-full md:w-[620px] flex flex-col items-center md:items-start">
-    <h1 className="text-2xl md:text-[30px] mb-4 text-center md:text-left">
+  <div className="w-full md:w-[620px] flex flex-col items-center  md:items-start">
+    <h1 className="text-2xl md:text-[30px] mb-3 text-center md:text-left">
       <span className="text-[#366cff]"> FOR TEACHERS </span>
        we provide everything you can do in a physical classroom{" "}
     </h1>
@@ -187,12 +187,12 @@ const navigate = useNavigate();
     </p>
   </div>
   <div className="flex flex-col items-center mt-5 md:mt-0 w-full md:w-[45%]">
-    <div className="relative">
+    <div className="relative mb-8">
       <img src={teacherimage} className="w-full rounded-xl" />
     </div>
   </div>
 </motion.div>
-      <Pricing id="Pricing" />
+      {/* <Pricing id="Pricing" /> */}
 
       
       <Reviews />

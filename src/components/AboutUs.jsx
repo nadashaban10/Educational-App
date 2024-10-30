@@ -14,8 +14,8 @@ function AboutUs() {
       immersive, interactive learning experiences. Through AR, students can</p>
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8">
         <div className='md:w-2/5 text-center md:text-left order-2 md:order-1'>
-          <h2 className='md:text-5xl text-4xl font-bold text-text mb-5 leading-normal'>Explore virtual labs  <span className='text-[#366cff]'></span></h2>
-          <p className='text-gray-500 text-lg mb-7'>where they can conduct experiments safely and see scientific
+          <h2 className='md:text-4xl text-3xl  font-bold text-text mb-1 leading-normal uppercase'>Explore virtual labs  <span className='text-[#366cff]'></span></h2>
+          <p className='text-gray-500 text-md mb-4'>where they can conduct experiments safely and see scientific
           principles in action</p>
           <button className='bg-blue-600 text-white py-2 px-4 rounded-lg'>Learn More</button>
         </div>
@@ -28,16 +28,16 @@ function AboutUs() {
           <img src={imagethree} alt='image' className='w-[400px] h-auto rounded-xl shadow-lg'/>
         </div>
         <div className='md:w-2/5 text-center md:text-left order-1 md:order-2'>
-          <h2 className='md:text-5xl text-4xl font-bold  mb-5 leading-normal'>Visualize historical events</h2>
-          <p className='text-gray-500 text-lg mb-7'>as though they are happening in front of them, making
+          <h2 className='md:text-4xl text-3xl font-bold  mb-1 leading-normal uppercase'> HISTORICAL SITES</h2>
+          <p className='text-gray-500 text-md mb-4'>as though they are happening in front of them, making
           history come alive.</p>
           <button className='bg-blue-600 text-white py-2 px-4 rounded-lg'>Learn More</button>
         </div>
       </div>
       <div className="flex flex-col md:flex-row justify-between items-center gap-4 mt-8">
         <div className='md:w-2/5 text-center md:text-left order-2 md:order-1'>
-          <h2 className='md:text-5xl text-4xl font-bold  mb-5 leading-normal'>Interact with 3D models</h2>
-          <p className='text-gray-500 text-lg mb-7'>of molecules, historical artifacts, and more, providing
+          <h2 className='md:text-4xl text-3xl  font-bold  w-full mb-1 leading-normal uppercase'>Interact with 3D models</h2>
+          <p className='text-gray-500 text-md mb-4'>of molecules, historical artifacts, and more, providing
 hands-on learning without physical materials.
 .</p>
           <button className='bg-blue-600 text-white py-2 px-4 rounded-lg'>Learn More</button>

@@ -13,8 +13,8 @@ import {
 const Footer = () => {
   return (
     <Element name="footer">
-      <footer className="bg-gray-50 bg-opacity-[90%] h-full" id="About">
-        <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start px-5 text-center sm:text-left ">
+      <footer className="bg-gray-50 bg-opacity-[90%] h-full " id="About">
+        <div className="flex flex-col sm:flex-row justify-center sm:justify-between items-center sm:items-start px-9 text-center sm:text-left ">
           <form className="w-full sm:w-1/3 p-3 bg-white rounded-lg mt-5 sm:mt-20 text-center sm:text-left order-3 sm:order-3">
             <h1 className="font-poppins font-bold text-2xl">Send Message</h1>
             <div className="flex flex-col space-y-3 mt-4">
@@ -72,11 +72,11 @@ const Footer = () => {
   
           </div>
         </div>
-        
-        <h2 className="font-bold text-black text-lg mb-1 lg:text-left md:text-left text-center mt-2  sm:pl-5">
-            You Can Follow Us on:
+        <div>
+        <h2 className="font-bold text-black text-lg mb-1 lg:text-left md:text-left text-center mt-2 mx-2 sm:pl-5">
+            You Can Follow us on:
           </h2>
-        <div className="w-full flex flex-row sm:flex-row justify-center items-center sm:justify-start sm:items-center text-slate-600 py sm:pl-5">
+        <div className="w-full flex flex-row sm:flex-row justify-center items-center sm:justify-start sm:items-center text-slate-600 py sm:pl-5  ">
         
           <ul className="flex space-x-4 items-start justify-start">
             <li>
@@ -123,7 +123,7 @@ const Footer = () => {
             Copyright © 2024 All Rights Reserved
           </span>
         </div>
-        
+        </div>
       </footer>
     </Element>
   );
