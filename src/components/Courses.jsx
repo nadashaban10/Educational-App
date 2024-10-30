@@ -39,10 +39,10 @@ const Courses = () => {
   ];
 
   return (
-    <div id="courses" className="w-full flex justify-center items-center min-h-[400px]">
-      <div className="w-[85%] m-auto relative">
+    <div id="courses" className="w-full flex justify-center items-center min-h-[400px] ">
+      <div className="w-[85%] m-auto relative ">
         <div className="w-full">
-          <div className="text-center flex justify-center items-center flex-col text-3xl text-black font-semibold relative pb-[45px]">
+          <div className="text-center flex justify-center items-center flex-col text-3xl text-black font-semibold relative pb-[45px] ">
             <h2 className="font-bold text-4xl text-blue-600">Our Courses</h2>
             <div className="w-[100px] h-[2px]"></div>
           </div>

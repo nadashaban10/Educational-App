@@ -74,8 +74,8 @@ function Courses() {
     <>
       <div className="courses-container w-full h-full  ">
         <Navbar />
-        <div className="courses-content h-[230px] w-full bg-[#366cff] flex flex-col justify-center items-center opacity-[90%] relative shadow-md">
-          <h1 className="text-white text-5xl font-bold text-center">Courses</h1>
+        <div className="courses-content h-[230px] w-full bg-[#366cff] flex flex-col justify-center items-center opacity-[90%] relative shadow-md mt-[100px]">
+          <h1 className="text-white text-4xl font-bold text-center">Courses</h1>
           <p className="text-white text-center text-sm py-4 font-bold cursor-pointer px-5">
             COURSES &gt;&gt; HOME
           </p>
@@ -143,7 +143,7 @@ function Courses() {
           ))}
         </div>
       </div>
-      <div className="bg- h-full flex justify-center items-center flex-col mt-[100px] mb-[50px] w-full sm:w-full">
+      {/* <div className="bg- h-full flex justify-center items-center flex-col mt-[100px] mb-[50px] w-full sm:w-full">
   <h1 className="text-4xl w-full text-center tracking-wider font-poppins text-blue-600">Explore Our Top Subjects</h1>
   <div className="bg-gray-300 h-[2px] m-5 w-[330px]"></div>
   <div className="grid md:grid-cols-4 sm:grid-cols-2 gap-2 card-container w-[90%] mx-auto justify-center items-center">
@@ -158,7 +158,7 @@ function Courses() {
       </div>
     ))}
   </div>
-</div>
+</div> */}
       <Footer   />
     </>
   );
