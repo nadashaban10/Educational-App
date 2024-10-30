@@ -45,7 +45,7 @@ const navigate = useNavigate();
     transition={{ duration: 0.8 }}
     viewport={{ once: true }}
   >
-    <h4 className="text-2xl md:text-5xl font-bold font-poppins text-black">
+    <h4 className="text-2xl md:text-5xl font-bold font-poppins text-white">
       <span className="text-blue-500">
         Transform Learning with
          Arcade Academy
@@ -53,7 +53,7 @@ const navigate = useNavigate();
       <br />
       The Future of Education is Here
     </h4>
-    <p className="text-sm md:text-lg font-poppins text-black pb-2">
+    <p className="text-sm md:text-lg font-poppins text-white pb-2">
       Immerse yourself in interactive, AR-driven lessons that bring
       science and history to life for high school students
     </p>
