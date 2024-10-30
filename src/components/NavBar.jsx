@@ -65,11 +65,11 @@ function NavBar() {
           <div className='relative flex flex-row  space-x-4 text-blu-500 text-3xl font-bold cursor-pointer'>
             <div className="relative">
               <FiShoppingCart />
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">3</div>
+              <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</div>
             </div>
             <div className="relative">
               <FaRegHeart />
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">5</div>
+              <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</div>
             </div>
           </div>
         </div>
