@@ -3,6 +3,9 @@ import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import RegistrationPopup from './RegisterPopup';
 // import { AuthContext } from '../context/AuthContext';
+import NavBar from './NavBar';
+import Footer from './Footer';
+import virtualreality from "../../public/images/virtual-reality-in-Education-.jpg";
 
 const Register = ({ handleLoginOpen }) => {
     const navigate = useNavigate();
@@ -11,6 +14,8 @@ const Register = ({ handleLoginOpen }) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [phone, setPhone] = useState('');
+    const [age, setAge] = useState('');
+    const [gender, setGender] = useState('');
     const [error, setError] = useState(null);
     const [isPopupOpen, setIsPopupOpen] = useState(false); // Popup visibility state
     const [loading, setLoading] = useState(false); // Loading state
@@ -18,15 +23,19 @@ const Register = ({ handleLoginOpen }) => {
     const handleClick = () => {
         navigate('/Login');
     };
+    const handleRegisterClick = (e) => {
+        e.preventDefault();
+        setIsPopupOpen(true);
+    }
 
-    const fetchRegisterUser = async (name, email, password, phone) => {
+    const fetchRegisterUser = async (name, email, password, phone, age, gender) => {
         try {
-            const response = await fetch('http://localhost:4000/api/v1/auth/user/signup', {
+            const response = await fetch('', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, email: { email: email }, password, phone: { phone: phone } }),
+                body: JSON.stringify({ name, email: { email: email }, password, phone: { phone: phone }, age, gender }),
             });
             const data = await response.json();
             if (response.ok) {
@@ -43,25 +52,27 @@ const Register = ({ handleLoginOpen }) => {
         }
     };
 
-    const handleRegisterClick = async (e) => {
-        e.preventDefault();
-        setLoading(true); // Set loading state
-        await fetchRegisterUser(name, email, password, phone);
-    };
+    // const handleRegisterClick = async (e) => {
+    //     e.preventDefault();
+    //     setLoading(true); // Set loading state
+    //     await fetchRegisterUser(name, email, password, phone, age, gender);
+    // };
 
     const closePopup = () => {
         setIsPopupOpen(false);
     };
 
     return (
-        <div className="h-[550px] flex items-center justify-center mt-[70px] rtl">
-            <div className="p-6 max-w-lg w-full">
-                <h2 className="text-3xl font-bold text-center text-[#254466] mb-5">Create Account</h2>
-                <p className="text-gray-400 p-2">Please enter your details to create an account.</p>
+        <>
+        <NavBar />
+        <div className="h-full flex items-center w-full justify-center mt-[100px] rtl" style={{ backgroundImage: `url(${virtualreality})`, opacity: "95%" }}>
+            <div className="py-3 px-5 max-w-lg w-full bg-white my-5">
+                <h2 className="text-3xl font-bold text-center text-[#254466] mb-">Join Us!</h2>
+                <p className="text-gray-400 p-2">Please enter your details to create an account. We will connect with you when the project launches.</p>
 
                 {error && <p className="text-red-500 text-center">{error}</p>}
 
-                <form onSubmit={handleRegisterClick}>
+                <form onSubmit={handleRegisterClick} className='bg-white'>
                     <div className="mb-6 relative">
                         <FaUser className="absolute left-3 top-3 text-black" />
                         <input
@@ -104,12 +115,34 @@ const Register = ({ handleLoginOpen }) => {
                             placeholder="Phone"
                         />
                     </div>
+                    <div className="mb-6 relative">
+                   
+                        <input
+                            value={age}
+                            onChange={(e) => setAge(e.target.value)}
+                            type="number"
+                            className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A76D1] transition-colors "
+                            placeholder="Age"
+                        />
+                    </div>
+                    <div className="mb-6 relative">
+                        <select
+                            value={gender}
+                            onChange={(e) => setGender(e.target.value)}
+                            className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A76D1] transition-colors"
+                        >
+                            <option value="" disabled>Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
                     <button
                         type="submit"
                         className="w-full bg-[#1A76D1] text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-[#1A76D1] transition duration-300 ease-in-out"
                         disabled={loading} // Disable button while loading
                     >
-                        {loading ? 'Loading...' : 'Create Account'}
+                        {loading ? 'Loading...' : 'Join Now!'}
                     </button>
                 </form>
 
@@ -126,6 +159,8 @@ const Register = ({ handleLoginOpen }) => {
                 <RegistrationPopup isOpen={isPopupOpen} onClose={closePopup} />
             </div>
         </div>
+        <Footer />
+        </>
     );
 };
 

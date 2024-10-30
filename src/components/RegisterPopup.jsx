@@ -8,8 +8,8 @@ import { motion } from 'framer-motion';
 const RegistrationPopup = ({ isOpen, onClose }) => {
     const navigate = useNavigate();
 
-    const handleLoginRedirect = () => {
-        navigate('/Login');
+    const handleGoHome = () => {
+        navigate('/');
         onClose();
     };
 
@@ -31,9 +31,9 @@ const RegistrationPopup = ({ isOpen, onClose }) => {
                 </div>
                 <div className='bg-[] h-[200px] w-[390px]'></div>
                 <h2 className='font-bold text-2xl pb-3'>Registration Successful</h2>
-                <p className='mb-5'>Please check your email for further instructions.</p>
-                <button onClick={handleLoginRedirect} className='bg-[#1A76D1] text-white py-2 px-4 rounded-md '>
-                    Go to Login
+                <p className='mb-5 text-center'>Thank you for registering! We will connect with you when the app launches.</p>
+                <button onClick={handleGoHome} className='bg-[#1A76D1] text-white py-2 px-4 rounded-md '>
+                    Back to home Page
                 </button>
             </motion.div>
         </Popup>

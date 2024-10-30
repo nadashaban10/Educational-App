@@ -23,8 +23,12 @@ import { FaPhoneVolume } from "react-icons/fa6";
 import { FaHouseChimney } from "react-icons/fa6";
 import Courses from "../components/Courses";
 import Reviews from "../components/Reviews";
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
+const navigate = useNavigate();
+  const handlenavigate = () => {
+    navigate("/register"); }
   return (
     <>
       <NavBar />
@@ -54,7 +58,8 @@ function LandingPage() {
       science and history to life for high school students
     </p>
     <div className="w-full h-auto md:h-[180px] flex flex-col md:flex-row items-center font-semibold space-y-3 md:space-y-0">
-      <button className="rounded-full text-lg md:text-2xl h-[70px] md:h-[100px] w-full md:w-[500px] bg-[#366cff] text-center space-y-2 text-white mr-0 md:mr-3 px-3">
+      <button onClick={handlenavigate}
+       className="rounded-full text-lg md:text-2xl h-[70px] md:h-[100px] w-full md:w-[500px] bg-[#366cff] text-center space-y-2 text-white mr-0 md:mr-3 px-3">
         Sign Up to Be Alerted When the App is Available!
       </button>
       <button className="rounded-full text-lg md:text-2xl h-[50px] md:h-[70px] bg-black w-full md:w-[200px] text-white px-3">
@@ -80,7 +85,7 @@ function LandingPage() {
       particularly visual learners, in complex subjects like physics,
       chemistry, and history. Arcade Academy addresses this challenge by
       using Augmented Reality (AR) to create immersive learning
-      experiences that make abstract concepts tangible and exciting”
+      experiences that make abstract concepts tangible and exciting
     </p>
   </div>
 
