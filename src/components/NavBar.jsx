@@ -16,7 +16,7 @@ function NavBar() {
 
   const navigate = useNavigate();
   const handleClickLogin = () => {
-    navigate('/register');
+    navigate('/Register');
   };
   const handleClickRegister = () => {
     navigate('/Register');
