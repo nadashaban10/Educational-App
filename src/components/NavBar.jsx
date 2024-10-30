@@ -60,7 +60,7 @@ function NavBar() {
             About us
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </ScrollLink>
-          <button className={`nav-item cursor-pointer relative border border-blue-500 rounded-xl bg-black px-3 text-white w-[150px] h-[60px] ${isNavVisible ? 'block' : 'hidden'} md:hidden`} onClick={handleClickLogin}> Login </button>
+          <button className={`nav-item cursor-pointer relative border border-blue-500 rounded-xl bg-black px-3 text-white w-[150px] h-[60px] ${isNavVisible ? 'block' : 'hidden'} md:hidden`} onClick={handleClickLogin}> Join Now! </button>
         </div>
         <div className={`flex flex-row md:flex-row space-x-5 md:space-y-0 md:space-x-2 font-poppins ${isNavVisible ? 'block' : 'block'} md:flex mr-3 `}>
           <div className='relative flex flex-row  space-x-4 text-blu-500 text-3xl font-bold cursor-pointer'>
