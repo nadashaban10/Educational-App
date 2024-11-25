@@ -35,18 +35,12 @@ function NavBar() {
             Home
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </Link>
-          <Link to="/profile" className="nav-item cursor-pointer relative">
-            Profile
-            <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
-          </Link>
+          
           <Link to="/courses" className="nav-item cursor-pointer relative">
             Courses
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </Link>
-          <ScrollLink to="Pricing" smooth={true} duration={500} className="nav-item cursor-pointer relative">
-            Pricing
-            <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
-          </ScrollLink>
+         
           <ScrollLink to="features" smooth={true} duration={500} className="nav-item cursor-pointer relative">
            Services
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
@@ -62,15 +56,16 @@ function NavBar() {
           <button className={`nav-item cursor-pointer relative border border-blue-500 rounded-xl bg-black px-3 text-white w-[150px] h-[60px] ${isNavVisible ? 'block' : 'hidden'} md:hidden`} onClick={handleClickLogin}> Join Now! </button>
         </div>
         <div className={`flex flex-row md:flex-row space-x-5 md:space-y-0 md:space-x-2 font-poppins ${isNavVisible ? 'block' : 'block'} md:flex mr-3 `}>
-          <div className='relative flex flex-row  space-x-4 text-blu-500 text-3xl font-bold cursor-pointer'>
-            <div className="relative">
-              <FiShoppingCart />
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</div>
-            </div>
-            <div className="relative">
-              <FaRegHeart />
-              <div className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">0</div>
-            </div>
+          <div className='relative flex flex-row  space-x-4 text-blu-500 text-lg  cursor-pointer'>
+          
+              <button
+              onClick={handleClickRegister}
+               className="nav-item cursor-pointer relative rounded-xl bg-blue-500 text-white p-2 w-[120px]">
+                join now
+                </button>
+
+           
+          
           </div>
         </div>
       </div>
