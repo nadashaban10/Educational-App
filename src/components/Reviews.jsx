@@ -50,17 +50,14 @@ function Reviews() {
             <div className="w-full flex flex-col justify-start items-start mt-8 ml-5">
               <p className="text-sm text-gray-500 tracking-wide">Testimonials</p>
               <h2 className="text-2xl lg:text-xl font-bold text-blue-600 tracking-wider">
-                What studentes say about us:
+                What students say about us:
               </h2>
               <div className="bg-gray-400 w-[85%] h-[1px] mt-2"></div>
             </div>
             <Slider {...settings}>
               <div className="py-8 px-2">
                 <p className="text-gray-500 text-sm lg:text-md">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta
-                  dolor recusandae natus quas voluptas aperiam alias sunt aut
-                  itaque cum, quasi nam corporis error. Modi nemo voluptatem
-                  laboriosam sequi incidunt?
+                  "The AR learning experience truly transformed my way of understanding complex topics! I can now interact with 3D models and simulations that make studying so much more engaging and fun."
                 </p>
                 <div className="flex items-center justify-start mt-4">
                   <img
@@ -79,16 +76,13 @@ function Reviews() {
                     <h2 className="text-md lg:text-lg font-bold tracking-wide">
                       Nada Shaban
                     </h2>
-                    <p className="tracking-wide text-sm">Guest Reviews</p>
+                    <p className="tracking-wide text-sm">Student, AR Learning Enthusiast</p>
                   </div>
                 </div>
               </div>
               <div className="p-4">
                 <p className="text-gray-500 text-sm lg:text-md">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Deleniti eos architecto laboriosam odit quos nostrum perferendis
-                  doloribus illum? Dignissimos at, incidunt distinctio error animi
-                  doloremque quaerat temporibus atque odit cumque.
+                  "I was initially skeptical about using AR for studying, but this platform changed my perspective. The immersive environment allowed me to retain information better and understand concepts in a new light."
                 </p>
                 <div className="flex items-center mt-4">
                   <img
@@ -107,16 +101,13 @@ function Reviews() {
                     <h2 className="text-md lg:text-lg font-bold tracking-wide">
                       Jane Smith
                     </h2>
-                    <p className="tracking-wide text-sm">Guest Reviews</p>
+                    <p className="tracking-wide text-sm">Student, Tech Enthusiast</p>
                   </div>
                 </div>
               </div>
               <div className="p-4">
                 <p className="text-gray-500 text-sm lg:text-md">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Laudantium, alias. Ea, aliquid consequuntur! Error animi impedit
-                  aperiam officiis? Porro cum culpa quidem error ex assumenda
-                  magni est molestias autem aperiam.
+                  "The use of augmented reality in my studies made a huge difference. I was able to visualize scientific processes in real-time, which helped me understand and remember them much more effectively."
                 </p>
                 <div className="flex items-center mt-4">
                   <img
@@ -135,7 +126,7 @@ function Reviews() {
                     <h2 className="text-md lg:text-lg font-bold tracking-wide">
                       Alice Johnson
                     </h2>
-                    <p className="tracking-wide text-sm">Guest Reviews</p>
+                    <p className="tracking-wide text-sm">Student, AR Advocate</p>
                   </div>
                 </div>
               </div>
