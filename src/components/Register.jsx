@@ -12,7 +12,7 @@ const Register = ({ handleLoginOpen }) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
+    const [country, setcountry] = useState('');
     const [phone, setPhone] = useState('');
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
@@ -20,22 +20,21 @@ const Register = ({ handleLoginOpen }) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false); // Popup visibility state
     const [loading, setLoading] = useState(false); // Loading state
 
-    const handleClick = () => {
-        navigate('/Login');
-    };
+
     const handleRegisterClick = (e) => {
         e.preventDefault();
+        fetchRegisterUser(name, email, country, phone, age);
         setIsPopupOpen(true);
     }
 
-    const fetchRegisterUser = async (name, email, password, phone, age, gender) => {
+    const fetchRegisterUser = async (name, email, country, phone, age, gender) => {
         try {
-            const response = await fetch('', {
+            const response = await fetch('http://localhost:5000/api/v1/users/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, email: { email: email }, password, phone: { phone: phone }, age, gender }),
+                body: JSON.stringify({ name, email, country,  phone, age, gender }),
             });
             const data = await response.json();
             if (response.ok) {
@@ -98,11 +97,11 @@ const Register = ({ handleLoginOpen }) => {
                     <div className="mb-6 relative">
                         <FaLock className="absolute left-3 top-3 text-black" />
                         <input
-                            value={password}
-                            onChange={(e) => setPassword(e.target.value)}
-                            type="password"
+                            value={country}
+                            onChange={(e) => setcountry(e.target.value)}
+                            type="text"
                             className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A76D1] transition-colors"
-                            placeholder="Password"
+                            placeholder="Country"
                         />
                     </div>
                     <div className="mb-6 relative">
@@ -138,6 +137,7 @@ const Register = ({ handleLoginOpen }) => {
                         </select>
                     </div>
                     <button
+                    onClick={handleRegisterClick}
                         type="submit"
                         className="w-full bg-[#1A76D1] text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-[#1A76D1] transition duration-300 ease-in-out"
                         disabled={loading} // Disable button while loading
@@ -146,14 +146,7 @@ const Register = ({ handleLoginOpen }) => {
                     </button>
                 </form>
 
-                <div className="text-center mt-6">
-                    <p className="text-gray-400">
-                        Already have an account?{' '}
-                        <button onClick={handleClick} className="text-[#1A76D1] hover:underline">
-                            Login
-                        </button>
-                    </p>
-                </div>
+              
 
                 {/* Registration Popup */}
                 <RegistrationPopup isOpen={isPopupOpen} onClose={closePopup} />

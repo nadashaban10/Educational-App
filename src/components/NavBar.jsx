@@ -59,7 +59,9 @@ function NavBar() {
           <div className='relative flex flex-row  space-x-4 text-blu-500 text-lg  cursor-pointer'>
           
               <button
-              onClick={handleClickRegister}
+              onClick={handleClickRegister
+                
+              }
                className="nav-item cursor-pointer relative rounded-xl bg-blue-500 text-white p-2 w-[120px]">
                 join now
                 </button>
