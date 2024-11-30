@@ -25,7 +25,10 @@ function Reviews() {
 
   return (
     <>
-      <div className="Reviews-container relative w-full h-[100vh] flex flex-col lg:flex-row" id="Reviews">
+      <div
+        className="Reviews-container relative w-full h-[100vh] flex flex-col lg:flex-row"
+        id="Reviews"
+      >
         <div
           className="relative w-full h-full bg-cover bg-center parallax flex flex-col lg:flex-row justify-around items-center"
           style={{ backgroundImage: `url(${virtualreality})` }}
@@ -48,7 +51,9 @@ function Reviews() {
 
           <div className="right-sec relative flex flex-col h-auto lg:h-[400px] pb-[30px] text-black w-[90%] lg:w-[30%] pt-2 bg-white shadow-lg mb-8 lg:mt-0">
             <div className="w-full flex flex-col justify-start items-start mt-8 ml-5">
-              <p className="text-sm text-gray-500 tracking-wide">Testimonials</p>
+              <p className="text-sm text-gray-500 tracking-wide">
+                Testimonials
+              </p>
               <h2 className="text-xl lg:text-2xl font-bold text-blue-600 tracking-wider">
                 What students say about us:
               </h2>
@@ -57,7 +62,10 @@ function Reviews() {
             <Slider {...settings}>
               <div className="py-8 px-2">
                 <p className="text-gray-500 text-sm lg:text-md">
-                  "The AR learning experience truly transformed my way of understanding complex topics! I can now interact with 3D models and simulations that make studying so much more engaging and fun."
+                  "The AR learning experience truly transformed my way of
+                  understanding complex topics! I can now interact with 3D
+                  models and simulations that make studying so much more
+                  engaging and fun."
                 </p>
                 <div className="flex items-center justify-start mt-4">
                   <img
@@ -76,13 +84,18 @@ function Reviews() {
                     <h2 className="text-md lg:text-lg font-bold tracking-wide">
                       Nada Shaban
                     </h2>
-                    <p className="tracking-wide text-sm">Student, AR Learning Enthusiast</p>
+                    <p className="tracking-wide text-sm">
+                      Student, AR Learning Enthusiast
+                    </p>
                   </div>
                 </div>
               </div>
               <div className="p-4">
                 <p className="text-gray-500 text-sm lg:text-md">
-                  "I was initially skeptical about using AR for studying, but this platform changed my perspective. The immersive environment allowed me to retain information better and understand concepts in a new light."
+                  "I was initially skeptical about using AR for studying, but
+                  this platform changed my perspective. The immersive
+                  environment allowed me to retain information better and
+                  understand concepts in a new light."
                 </p>
                 <div className="flex items-center mt-4">
                   <img
@@ -101,13 +114,18 @@ function Reviews() {
                     <h2 className="text-md lg:text-lg font-bold tracking-wide">
                       Jane Smith
                     </h2>
-                    <p className="tracking-wide text-sm">Student, Tech Enthusiast</p>
+                    <p className="tracking-wide text-sm">
+                      Student, Tech Enthusiast
+                    </p>
                   </div>
                 </div>
               </div>
               <div className="p-4">
                 <p className="text-gray-500 text-sm lg:text-md">
-                  "The use of augmented reality in my studies made a huge difference. I was able to visualize scientific processes in real-time, which helped me understand and remember them much more effectively."
+                  "The use of augmented reality in my studies made a huge
+                  difference. I was able to visualize scientific processes in
+                  real-time, which helped me understand and remember them much
+                  more effectively."
                 </p>
                 <div className="flex items-center mt-4">
                   <img
@@ -126,7 +144,9 @@ function Reviews() {
                     <h2 className="text-md lg:text-lg font-bold tracking-wide">
                       Alice Johnson
                     </h2>
-                    <p className="tracking-wide text-sm">Student, AR Advocate</p>
+                    <p className="tracking-wide text-sm">
+                      Student, AR Advocate
+                    </p>
                   </div>
                 </div>
               </div>

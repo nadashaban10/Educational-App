@@ -13,8 +13,6 @@ import Footer from "../components/Footer";
 import { nav } from "framer-motion/client";
 import { useNavigate } from "react-router-dom";
 
-
-
 const courses = [
   {
     img: img5,
@@ -53,23 +51,29 @@ const courses = [
   },
 ];
 const subjects = [
-  { img: img5, title: "Mathematics", description: "Learn the fundamentals of Mathematics." },
+  {
+    img: img5,
+    title: "Mathematics",
+    description: "Learn the fundamentals of Mathematics.",
+  },
   { img: img5, title: "Science", description: "Explore the world of Science." },
-  { img: img7, title: "History", description: "Dive into the past with History." },
+  {
+    img: img7,
+    title: "History",
+    description: "Dive into the past with History.",
+  },
   { img: img5, title: "Art", description: "Unleash your creativity with Art." },
   { img: img6, title: "Art", description: "Unleash your creativity with Art." },
   { img: img5, title: "Art", description: "Unleash your creativity with Art." },
   { img: img6, title: "Art", description: "Unleash your creativity with Art." },
-  { img: img5, title: "Art", description: "Unleash your creativity with Art." }
+  { img: img5, title: "Art", description: "Unleash your creativity with Art." },
 ];
 
-
 function Courses() {
-
   const navigate = useNavigate();
   const handleCourseClick = () => {
-    navigate('/CourseDetails');
-  }
+    navigate("/CourseDetails");
+  };
   return (
     <>
       <div className="courses-container w-full h-full  ">
@@ -80,22 +84,24 @@ function Courses() {
             COURSES &gt;&gt; HOME
           </p>
           <div className="flex h-[40px] w-full max-w-[500px] mt-4 mx-auto">
-  <button className="bg-white h-[40px] w-[150px] flex items-center justify-between pl-5">
-    Subject <FaChevronDown className="" />
-  </button>
-  <input
-    className="bg-white w-[70%] h-full pl-5 text-sm text-gray-400"
-    placeholder=""
-  />
-  <button className="w-[30%] h-full bg-red-500 text-white font-bold font-poppins">
-    Search
-  </button>
-</div>
+            <button className="bg-white h-[40px] w-[150px] flex items-center justify-between pl-5">
+              Subject <FaChevronDown className="" />
+            </button>
+            <input
+              className="bg-white w-[70%] h-full pl-5 text-sm text-gray-400"
+              placeholder=""
+            />
+            <button className="w-[30%] h-full bg-red-500 text-white font-bold font-poppins">
+              Search
+            </button>
+          </div>
         </div>
       </div>
-      <div className=  "flex justify-center mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-8 mb-[40px]"
-        onClick={handleCourseClick}>
+      <div className="flex justify-center mt-5">
+        <div
+          className="grid grid-cols-1 md:grid-cols-3 mt-5 gap-8 mb-[40px]"
+          onClick={handleCourseClick}
+        >
           {courses.map((course, index) => (
             <div
               key={index}
@@ -114,7 +120,9 @@ function Courses() {
                   <BsFillPatchCheckFill className="text-blue-600" />
                 </div>
                 <div>
-                  <h1 className="text-sm text-gray-600">{course.description}</h1>
+                  <h1 className="text-sm text-gray-600">
+                    {course.description}
+                  </h1>
                   <div className="bg-gray-300 w-[310px] mt-3 h-[1px]"> </div>
                   <div className="flex flex-row items-center justify-between mt-2">
                     <div className="flex flex-row text-yellow-400">
@@ -127,11 +135,9 @@ function Courses() {
                     <div className="ml-4 text-black font-bold text-xl">
                       {course.price}
                     </div>
-                    
                   </div>
-                  
                 </div>
-                
+
                 <FaHeart className="text-3xl text-red-500 absolute top-4 right-4" />
               </div>
               <div className="flex justify-center mt-4">
@@ -159,7 +165,7 @@ function Courses() {
     ))}
   </div>
 </div> */}
-      <Footer   />
+      <Footer />
     </>
   );
 }
