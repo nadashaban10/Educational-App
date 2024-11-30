@@ -1,8 +1,7 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import RegistrationPopup from './RegisterPopup';
-// import { AuthContext } from '../context/AuthContext';
 import NavBar from './NavBar';
 import Footer from './Footer';
 import virtualreality from "../../public/images/virtual-reality-in-Education-.jpg";
@@ -12,7 +11,7 @@ const Register = ({ handleLoginOpen }) => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
-    const [country, setcountry] = useState('');
+    const [country, setCountry] = useState('');
     const [phone, setPhone] = useState('');
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
@@ -20,32 +19,34 @@ const Register = ({ handleLoginOpen }) => {
     const [isPopupOpen, setIsPopupOpen] = useState(false); // Popup visibility state
     const [loading, setLoading] = useState(false); // Loading state
 
-
     const handleRegisterClick = (e) => {
         e.preventDefault();
-        fetchRegisterUser(name, email, country, phone, age);
-        setIsPopupOpen(true);
+        fetchRegisterUser(name, email, country, phone, age, gender);
     }
 
     const fetchRegisterUser = async (name, email, country, phone, age, gender) => {
+        setLoading(true); // Set loading state
         try {
             const response = await fetch('https://student-app-backend-nine.vercel.app/api/v1/users/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, email, country,  phone, age, gender }),
+                body: JSON.stringify({ name, email, country, phone, age, gender }),
             });
             const data = await response.json();
             if (response.ok) {
                 setIsPopupOpen(true); // Show popup on successful registration
+                setError(null); // Clear any previous errors
             } else {
                 console.error('Registration failed:', data.errors || data.message);
                 setError(data.errors || data.message);
+                setIsPopupOpen(false); // Do not show popup if registration failed
             }
         } catch (error) {
             console.error('Error during registration:', error);
             setError('Error during registration. Please try again.');
+            setIsPopupOpen(false); // Do not show popup if there is an error
         } finally {
             setLoading(false); // Reset loading state
         }
@@ -92,7 +93,7 @@ const Register = ({ handleLoginOpen }) => {
                         <FaLock className="absolute left-3 top-3 text-black" />
                         <input
                             value={country}
-                            onChange={(e) => setcountry(e.target.value)}
+                            onChange={(e) => setCountry(e.target.value)}
                             type="text"
                             className="w-full px-10 py-3 border border-gray-600 bg-white text-gray-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#1A76D1] transition-colors"
                             placeholder="Country"
@@ -131,7 +132,6 @@ const Register = ({ handleLoginOpen }) => {
                         </select>
                     </div>
                     <button
-                    onClick={handleRegisterClick}
                         type="submit"
                         className="w-full bg-[#1A76D1] text-white font-semibold py-3 rounded-lg shadow-lg hover:bg-[#1A76D1] transition duration-300 ease-in-out"
                         disabled={loading} // Disable button while loading
@@ -139,8 +139,6 @@ const Register = ({ handleLoginOpen }) => {
                         {loading ? 'Loading...' : 'Join Now!'}
                     </button>
                 </form>
-
-              
 
                 {/* Registration Popup */}
                 <RegistrationPopup isOpen={isPopupOpen} onClose={closePopup} />
