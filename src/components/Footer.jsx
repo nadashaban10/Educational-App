@@ -46,7 +46,7 @@ const Footer = () => {
             />
             <p className="mb-1 text-gray-800">
           
-  Arcade Academy is an innovative platform designed to enhance the learning experience for students by leveraging Augmented Reality (AR) technology. Our mission is to make subjects like history and science more engaging, interactive, and easier to understand. By bringing educational content to life, Arcade Academy helps students visualize complex concepts and immerse themselves in interactive learning environments. Whether it's exploring ancient civilizations, understanding the intricacies of the human body, or witnessing scientific phenomena firsthand, our platform provides a unique and captivating way to learn. Join us on this exciting journey to revolutionize education, making learning not only fun and effective but also accessible to students everywhere. With Arcade Academy, the future of education is here.
+  Arcade Academy is an innovative platform designed to enhance the learning experience for students by leveraging Augmented Reality (AR) technology. Our mission is to make subjects like history and science more engaging, interactive, and easier to understand. By bringing educational content to life, Arcade Academy helps students visualize complex concepts and immerse themselves in interactive learning environments. 
 
             </p>
            
