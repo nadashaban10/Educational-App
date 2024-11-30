@@ -1,10 +1,10 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import imag1 from "../../public/images/1000_F_280126582_Ig4OLIbbSryXwe2S63aBu2TKY0Bj9WjH.jpg";
+
 import imag2 from "../../public/images/science-word-theme_23-2148540555.avif";
 import imag3 from "../../public/images/1.jpg";
-import imag4 from "../../public/images/math.jpg";
+
 
 const Courses = () => {
   const responsive = {
@@ -34,8 +34,8 @@ const Courses = () => {
     { id: 1, name: "Mathematics", image: imag4 },
     { id: 2, name: "Science", image: imag2 },
     { id: 3, name: "History", image: imag3 },
-    { id: 4, name: "Geography", image: imag1 },
-    { id: 5, name: "English", image: imag4 },
+    { id: 4, name: "Geography", image: imag2 },
+    { id: 5, name: "English", image: imag2 },
   ];
 
   return (

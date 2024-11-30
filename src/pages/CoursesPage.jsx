@@ -4,11 +4,11 @@ import { LiaStarSolid } from "react-icons/lia";
 import { FaHeart } from "react-icons/fa";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { FaChevronDown } from "react-icons/fa";
-import img4 from "../../public/images/math.jpg";
-import img5 from "../../public/images/1000_F_280126582_Ig4OLIbbSryXwe2S63aBu2TKY0Bj9WjH.jpg";
+
+import img5 from "../../public/images/science-word-theme_23-2148540555.avif";
 import img6 from "../../public/images/science-word-theme_23-2148540555.avif";
 import img7 from "../../public/images/DALL·E-2024-03-28-13.07.17-Create-an-image-that-visualizes-the-concept-of-augmented-reality-in-education-showcasing-diverse-students-engaging-with-interactive-digital-elements-1024x675.webp";
-import img8 from "../../public/images/math.jpg";
+
 import Footer from "../components/Footer";
 import { nav } from "framer-motion/client";
 import { useNavigate } from "react-router-dom";
@@ -17,7 +17,7 @@ import { useNavigate } from "react-router-dom";
 
 const courses = [
   {
-    img: img4,
+    img: img5,
     title: "Math course",
     description:
       "This course covers fundamental concepts in mathematics, including algebra, geometry, and calculus. Perfect for students looking to strengthen their math skills.",
@@ -45,7 +45,7 @@ const courses = [
     price: "$45",
   },
   {
-    img: img8,
+    img: img5,
     title: "Computer Science course",
     description:
       "This course covers fundamental concepts in computer science, including programming, data structures, and algorithms. Perfect for students looking to strengthen their computer science skills.",
@@ -53,14 +53,14 @@ const courses = [
   },
 ];
 const subjects = [
-  { img: img4, title: "Mathematics", description: "Learn the fundamentals of Mathematics." },
+  { img: img5, title: "Mathematics", description: "Learn the fundamentals of Mathematics." },
   { img: img5, title: "Science", description: "Explore the world of Science." },
   { img: img7, title: "History", description: "Dive into the past with History." },
-  { img: img4, title: "Art", description: "Unleash your creativity with Art." },
+  { img: img5, title: "Art", description: "Unleash your creativity with Art." },
   { img: img6, title: "Art", description: "Unleash your creativity with Art." },
-  { img: img8, title: "Art", description: "Unleash your creativity with Art." },
+  { img: img5, title: "Art", description: "Unleash your creativity with Art." },
   { img: img6, title: "Art", description: "Unleash your creativity with Art." },
-  { img: img8, title: "Art", description: "Unleash your creativity with Art." }
+  { img: img5, title: "Art", description: "Unleash your creativity with Art." }
 ];
 
 

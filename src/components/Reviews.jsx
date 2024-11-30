@@ -49,7 +49,7 @@ function Reviews() {
           <div className="right-sec relative flex flex-col h-auto lg:h-[400px] pb-[30px] text-black w-[90%] lg:w-[30%] pt-2 bg-white shadow-lg mb-8 lg:mt-0">
             <div className="w-full flex flex-col justify-start items-start mt-8 ml-5">
               <p className="text-sm text-gray-500 tracking-wide">Testimonials</p>
-              <h2 className="text-2xl lg:text-xl font-bold text-blue-600 tracking-wider">
+              <h2 className="text-xl lg:text-2xl font-bold text-blue-600 tracking-wider">
                 What students say about us:
               </h2>
               <div className="bg-gray-400 w-[85%] h-[1px] mt-2"></div>

@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import img from "../../public/images/girl-learning-home-laptop-reading-study-elearning-desk-with-blurred-background-african-female-child-student-computer-with-tech-web-app-home-school-class-studying_590464-120659.avif";
 import img2 from "../../public/images/science-word-theme_23-2148540555.avif";
-import img3 from "../../public/images/math.jpg";
+import img3 from "../../public/images/Historyimage.jpg";
 import Footer from "../components/Footer";
 import NavBar from "../components/NavBar";
 import { Carousel } from "react-responsive-carousel";
@@ -140,7 +140,7 @@ const navigate = useNavigate();
   <div className="flex flex-col md:flex-row text-center justify-center items-center space-y-5 md:space-y-0 md:space-x-5">
     <div className="card-1 relative w-[90%] md:w-[400px] h-[230px]">
       <img src={img2} className="w-full h-full rounded-lg" />
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-30 p-1 rounded">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-white p-1 rounded">
       {/* <button className="mt-2 text-white bg-blue-600 hover:bg-black p-1 rounded-full w-[110px] md:w-[130px] h-[35px] md:h-[40px] top-9">
           Start Class
         </button> */}
@@ -148,7 +148,7 @@ const navigate = useNavigate();
     </div>
     <div className="card-2 relative w-[90%] md:w-[400px] h-[230px]">
       <img src={img3} className="w-full h-full rounded-lg" />
-      <div className="absolute inset-0 flex flex-col justify-center items-center text-white bg-black bg-opacity-30 p-1 rounded">
+      <div className="absolute inset-0 flex flex-col justify-center items-center text-white  p-1 rounded">
         {/* <button className="mt-2 text-white bg-blue-600 hover:bg-black p-1 rounded-full w-[110px] md:w-[130px] h-[35px] md:h-[40px]">
           Start Class
         </button> */}
@@ -194,6 +194,7 @@ const navigate = useNavigate();
 </motion.div>
       {/* <Pricing id="Pricing" /> */}
 
+<Pricing />
       
       <Reviews />
       <Footer />
