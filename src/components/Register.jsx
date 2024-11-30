@@ -29,7 +29,7 @@ const Register = ({ handleLoginOpen }) => {
 
     const fetchRegisterUser = async (name, email, country, phone, age, gender) => {
         try {
-            const response = await fetch('http://localhost:5000/api/v1/users/register', {
+            const response = await fetch('https://student-app-backend-nine.vercel.app/api/v1/users/register', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -50,12 +50,6 @@ const Register = ({ handleLoginOpen }) => {
             setLoading(false); // Reset loading state
         }
     };
-
-    // const handleRegisterClick = async (e) => {
-    //     e.preventDefault();
-    //     setLoading(true); // Set loading state
-    //     await fetchRegisterUser(name, email, password, phone, age, gender);
-    // };
 
     const closePopup = () => {
         setIsPopupOpen(false);
