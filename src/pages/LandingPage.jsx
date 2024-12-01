@@ -7,7 +7,7 @@ import NavBar from "../components/NavBar";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import teacherimage from "../../public/images/virtual-reality-in-Education-.jpg";
-import virtualreality from "../../public/images/virtual-reality-in-Education-.jpg";
+import virtualreality from "../../public/images/freepik__upload__32332.jpeg";
 import carsolimagethree from "../../public/images/mobile.jpg";
 import carsolimagefour from "../../public/images/tablet2.jpg";
 import carsolimagtwo from "../../public/images/tablet.jpg";
@@ -27,12 +27,12 @@ function LandingPage() {
       <NavBar />
       <div className="parent-container">
         <div
-          className="hero-container relative flex h-screen flex-col md:flex-row bg-cover  md:p-0"
+          className="hero-container relative flex h-screen flex-col md:flex-row bg-cover md:p-0 "
           style={{ backgroundImage: `url(${virtualreality})` }}
         >
-          <div className="absolute inset-0 bg-black opacity-30"></div>
+          <div className="absolute inset-0 opacity-80 backdrop-blur bg-transparent w-full h-full"></div>
           <motion.div
-            className="hero-left md:relative absolute top-[200px] space-y-3 z-10 md:bg-transparent md:p-8 p-3 bg-gray-100 bg-opacity-[30%]"
+            className="hero-left md:relative absolute lg:top-[300px] top-[250px] space-y-2 z-10 md:bg-transparent md:p-8 p-3 "
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -55,7 +55,7 @@ function LandingPage() {
             <div className="w-full h-auto md:h-[180px] flex flex-col md:flex-row items-center font-semibold space-y-3 md:space-y-0">
               <button
                 onClick={handlenavigate}
-                className="rounded-full text-md md:text-xl h-[70px] md:h-[100px] w-full md:w-[500px] bg-[#366cff] text-center space-y-2 text-white mr-0 md:mr-3 px-3"
+                className="rounded-full text-md md:text-xl h-[57px] md:h-[70px] w-full md:w-[500px] bg-[#366cff] text-center space-y-2 text-white mr-0 md:mr-3 px-3"
               >
                 Sign Up to Be Alerted When the App is Available !
               </button>
@@ -74,10 +74,10 @@ function LandingPage() {
         viewport={{ once: true }}
       >
         <div className="flex font-poppins justify-start md:items-start items-center flex-col w-full md:w-[90%] mb-5 md:mb-0">
-          <h2 className="font-bold text-2xl md:text-3xl">
+          <h2 className="font-bold text-2xl md:text-3xl text-center">
             Why <span className="text-[#366cff]">Arcade Academy</span> ?
           </h2>
-          <p className="text-gray-700 md:text-lg font-poppins p-2">
+          <p className="text-gray-700 md:text-lg font-poppins text-center py-1 md:text-left">
             Traditional education often struggles to engage students,
             particularly visual learners, in complex subjects like physics,
             chemistry, and history. Arcade Academy addresses this challenge by
@@ -133,7 +133,7 @@ function LandingPage() {
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
       >
-        <h2 className="text-4xl text-blue-600 tracking-widest text-center">
+        <h2 className="text-3xl text-blue-600 tracking-widest font-bold text-center">
           EXPLORE OUR TOP SUBJECTS
         </h2>
         <div className="flex flex-col md:flex-row text-center justify-center items-center space-y-5 md:space-y-0 md:space-x-5">
@@ -175,7 +175,7 @@ function LandingPage() {
         viewport={{ once: true }}
       >
         <div className="w-full md:w-[620px] flex flex-col items-center  md:items-start">
-          <h1 className="text-2xl md:text-[30px] mb-3 text-center md:text-left">
+          <h1 className="text-2xl md:text-[30px] mb-1 text-center md:text-left">
             <span className="text-[#366cff]"> FOR TEACHERS </span>
             we provide everything you can do in a physical classroom{" "}
           </h1>
@@ -191,10 +191,7 @@ function LandingPage() {
           </div>
         </div>
       </motion.div>
-      {/* <Pricing id="Pricing" /> */}
-
       <Pricing />
-
       <Reviews />
       <Footer />
     </>

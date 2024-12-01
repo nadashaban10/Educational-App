@@ -13,6 +13,7 @@ import Footer from "../components/Footer";
 import { nav } from "framer-motion/client";
 import { useNavigate } from "react-router-dom";
 
+
 const courses = [
   {
     img: img5,

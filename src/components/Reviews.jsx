@@ -37,7 +37,7 @@ function Reviews() {
 
           <div className="left-sec relative flex flex-col justify-center items-start text-white w-full lg:w-[40%] p-5 lg:ml-[50px] h-full">
             {/* Responsive font sizes */}
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-4">
+            <h2 className="text-2xl lg:text-3xl font-semibold mb-2">
               We Provide Top Destinations Especially For You Book Now and Enjoy!
             </h2>
             <div className="flex flex-row items-center justify-center space-x-5">

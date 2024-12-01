@@ -1,4 +1,4 @@
-import Login from './components/Login';
+
 import Register from './components/Register';
 import './index.css';
 
@@ -14,9 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/login" element={<Login />} />
+      
         <Route path="/courses" element={<Courses />} />
-
         <Route path="/coursedetails" element={<CourseDetails />} />
         <Route path="/dashboard" element={<DashBoard />} />
       </Routes>

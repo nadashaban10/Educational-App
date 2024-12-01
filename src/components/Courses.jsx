@@ -1,7 +1,6 @@
 import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
 import imag2 from "../../public/images/science-word-theme_23-2148540555.avif";
 import imag3 from "../../public/images/1.jpg";
 
@@ -55,7 +54,8 @@ const Courses = () => {
             responsive={responsive}
           >
             {subjects.map((subject) => (
-              <div className="h-fit block bg-gray-50 w-[300px]" key={subject.id}>
+              <div className="h-fit block bg-gray-50 w-[300px]" 
+              key={subject.id}>
                 <div className="w-full h-full relative custom-hover-effect transform transition-all duration-500 px-5">
                   <img
                     className="w-[300px] h-[250px] object-cover"
