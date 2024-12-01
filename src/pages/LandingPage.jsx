@@ -47,7 +47,7 @@ function LandingPage() {
                 The Future of Education is Here
               </span>
             </h4>
-            <p className="text-sm md:text-lg font-poppins text-white pb-2">
+            <p className="text-sm md:text-lg font-poppins text-white pb-1">
               Immerse yourself in interactive, AR-driven lessons that bring
               science and history to life for high school students
             </p>
