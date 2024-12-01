@@ -31,7 +31,7 @@ function LandingPage() {
         >
           <div className="absolute inset-0 opacity-80 backdrop-blur bg-transparent w-full h-full"></div>
           <motion.div
-            className="hero-left md:relative absolute lg:top-[280px] top-[250px] space-y-2 z-10 md:bg-transparent md:p-8 p-3 "
+            className="hero-left md:relative absolute lg:top-[260px] top-[250px] space-y-2 z-10 md:bg-transparent md:p-8 p-3 "
             initial={{ opacity: 0, x: -100 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
