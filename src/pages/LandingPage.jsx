@@ -13,7 +13,6 @@ import carsolimagefour from "../../public/images/tablet2.jpg";
 import carsolimagtwo from "../../public/images/tablet.jpg";
 import carsolimageone from "../../public/images/600x345_WebPage-Banner_13.png";
 import AboutUs from "../components/AboutUs";
-import Pricing from "../components/Pricing";
 import Reviews from "../components/Reviews";
 import { useNavigate } from "react-router-dom";
 
@@ -191,7 +190,7 @@ function LandingPage() {
           </div>
         </div>
       </motion.div>
-      <Pricing />
+  
       <Reviews />
       <Footer />
     </>

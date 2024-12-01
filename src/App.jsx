@@ -1,12 +1,8 @@
-
-import Register from './components/Register';
 import './index.css';
-
-import LandingPage from './pages/LandingPage';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Courses from './pages/CoursesPage';
 import DashBoard from './pages/DashBoard';
-import CourseDetails from './components/CourseDetails';
+import Register from './components/Register';
+import LandingPage from './pages/LandingPage';
 
 function App() {
   return (
@@ -14,9 +10,6 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/register" element={<Register />} />
-      
-        <Route path="/courses" element={<Courses />} />
-        <Route path="/coursedetails" element={<CourseDetails />} />
         <Route path="/dashboard" element={<DashBoard />} />
       </Routes>
     </BrowserRouter>

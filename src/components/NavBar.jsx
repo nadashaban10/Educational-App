@@ -4,8 +4,6 @@ import { CiMenuBurger } from "react-icons/ci";
 import { useNavigate } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { Link } from "react-router-dom";
-import { FiShoppingCart } from "react-icons/fi";
-import { FaRegHeart } from "react-icons/fa";
 import { IoCloseCircleSharp } from "react-icons/io5";
 
 function NavBar() {
@@ -16,9 +14,7 @@ function NavBar() {
   };
 
   const navigate = useNavigate();
-  const handleClickLogin = () => {
-    navigate("/Register");
-  };
+
   const handleClickRegister = () => {
     navigate("/Register");
   };
@@ -58,10 +54,7 @@ function NavBar() {
             <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
           </Link>
 
-          <Link to="/courses" className="nav-item cursor-pointer relative">
-            Courses
-            <div className="underline absolute bottom-0 left-0 w-0 h-[2px] bg-blue-500 transition-all duration-300"></div>
-          </Link>
+         
 
           <ScrollLink
             to="features"
@@ -94,7 +87,7 @@ function NavBar() {
             className={`nav-item cursor-pointer relative border border-blue-500 rounded-xl bg-black px-3 text-white w-[150px] h-[60px] ${
               isNavVisible ? "block" : "hidden"
             } md:hidden`}
-            onClick={handleClickLogin}
+            onClick={handleClickRegister}
           >
             Join Now!
           </button>
