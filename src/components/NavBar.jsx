@@ -8,7 +8,7 @@ import { IoCloseCircleSharp } from "react-icons/io5";
 
 function NavBar() {
   const [isNavVisible, setIsNavVisible] = useState(false);
-
+  
   const toggleNav = () => {
     setIsNavVisible(!isNavVisible);
   };
